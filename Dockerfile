@@ -1,14 +1,14 @@
-# Use an official OpenJDK image as base
-FROM openjdk:17-jdk-alpine
+# Use modern Java base image
+FROM eclipse-temurin:17-jdk-alpine
 
-# Set working directory inside the container
+# Set working directory
 WORKDIR /app
 
-# Copy the Java file into the container
-COPY Grade.java .
+# Copy files
+COPY . /app
 
-# Compile the Java program
+# Compile program (if needed)
 RUN javac Grade.java
 
-# Command to run the program
+# Run program
 CMD ["java", "Grade"]
