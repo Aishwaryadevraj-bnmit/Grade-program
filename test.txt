@@ -1,0 +1,19 @@
+docker ps
+
+docker build -t java-app .
+
+docker run java-app
+
+docker run -d -t java-app
+
+docker ps
+
+docker login
+
+docker build -t komalrajpurohit/java-app:v1 .
+
+docker ps
+
+docker run -d -t komalrajpurohit/java-app:v1
+
+docker push komalrajpurohit/java-app:v1
